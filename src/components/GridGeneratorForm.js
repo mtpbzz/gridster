@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import {
+  Form,
   FormGroup,
   FormControl,
   Button,
@@ -17,20 +18,20 @@ class GridGeneratorForm extends Component {
     return (
       <div className="gridster-generator-form">
         <div className="row">
-          <FormGroup>
-            <div className="col-md-2">
+          <Form inline>
+            <FormGroup>
               <label>Rows</label>
               <FormControl value={4} max={10} type="number" />
-            </div>
-            <div className="col-md-1">{ ' X ' }</div>
-            <div className="col-md-2">
+            </FormGroup>
+            {' x '}
+            <FormGroup>
               <label>Columns</label>
               <FormControl value={4} max={10} type="number" />
-            </div>
-            <div className="col-md-4">
+            </FormGroup>
+            <FormGroup>
               <Button bsStyle="primary" onClick={this.handleGenerate}>Generate</Button>
-            </div>
-          </FormGroup>
+            </FormGroup>
+          </Form>
         </div>
       </div>
     );

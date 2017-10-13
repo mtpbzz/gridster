@@ -37,6 +37,14 @@ html {
   .gridster-generator-form {
     border-radius: 5px;
     background: $ui-background-color;
+    padding: 10px 25px;
+    label {
+      display: block;
+      font-weight: normal;
+    }
+    input {
+      width: 100px;
+    }
   }
 }
 
