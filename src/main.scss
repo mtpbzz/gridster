@@ -1,6 +1,7 @@
 // UI Colors
 $background-color: #ffffff;
 $ui-background-color: #f1f1f1;
+$text-color: #6e6e6e;
 
 $btn-color: #4a90e2;
 $btn-hover-color: #76b5ff;
@@ -22,6 +23,7 @@ html {
   padding: 0; // Just resetting layout
   background: $background-color;
   height: 100vh;
+  color: $text-color;
 }
 
 .gridster-wrapper {
@@ -37,13 +39,35 @@ html {
   .gridster-generator-form {
     border-radius: 5px;
     background: $ui-background-color;
-    padding: 10px 25px;
-    label {
-      display: block;
-      font-weight: normal;
+    padding: 15px 40px;
+    .multiplier-symbol {
+      display: inline-block;
+      opacity: 0.8;
+      padding: 8px 12px;
     }
-    input {
-      width: 100px;
+    .form-group {
+      vertical-align: bottom;
+      label {
+        display: block;
+        font-weight: normal;
+        font-size: 12px;
+      }
+      input {
+        width: 60px;
+      }
+      button {
+        margin-left: 20px;
+        background-color: $btn-color;
+        border: 1px solid $btn-color;
+        &:hover {
+          background-color: $btn-hover-color;
+          border-color: $btn-hover-color;
+        }
+        &:active {
+          background-color: $btn-pressed-color;
+          border-color: $btn-pressed-color;
+        }
+      }
     }
   }
 }
