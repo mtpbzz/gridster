@@ -1,0 +1,38 @@
+// UI Colors
+$background-color: #ffffff;
+$ui-background-color: #f1f1f1;
+
+$btn-color: #4a90e2;
+$btn-hover-color: #76b5ff;
+$btn-pressed-color: #235896;
+
+$grid-default-color: #f1f1f1;
+$grid-hover-color: #f8f8f8;
+$grid-down-color: #e2e2e2;
+$grid-clear-color: #ffffff;
+$grid-start-color: #7ed321;
+$grid-end-color: #639530;
+$grid-path-color: #f5a623;
+$grid-border-color: #d9d9d9;
+
+
+body,
+html {
+  margin: 0; // Just resetting layout
+  padding: 0; // Just resetting layout
+  background: $background-color;
+  height: 100vh;
+}
+
+.gridster-wrapper {
+  width: 482px; // width in the mockup provided
+  height: 100vh;
+  margin: 0 auto;
+  padding: 50px 0;
+  .gridster-logo {
+    display: block;
+    width: 224px; // width in the mockup provided
+    margin-bottom: 40px;
+  }
+}
+

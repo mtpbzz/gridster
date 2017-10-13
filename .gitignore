@@ -1,0 +1,8 @@
+/node_modules
+/build
+.DS_Store
+*.log
+*.iml
+*.desc
+*.lock
+!yarn.lock
