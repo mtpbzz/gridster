@@ -48,6 +48,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "eslint-plugin-import": "^2.7.0",
+    "extensible-runtime": "^4.1.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
