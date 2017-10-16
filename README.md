@@ -13,7 +13,7 @@ Created using React, Redux, webpack, ES6 and Sass.
 Start the Webpack server (includes live reloading when you change files):
 
 ```sh
-  $ npm start
+  $ npm run start
 ```
 
 ## Usage
