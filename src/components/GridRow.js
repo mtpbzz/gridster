@@ -3,25 +3,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { GridSquare } from './';
 import actions from '../actions';
 
 
 class GridRow extends Component {
 
   renderSquares() {
-    const { colCount } = this.props;
-    const cols = [...Array(colCount).keys()];
-
-    return cols.map((col, i) => {
-      return 'Square'
+    const { gridster: { grid, rows, cols }, idx } = this.props;
+    const colsArray = [...Array(cols).keys()];
+    return colsArray.map((col, i) => {
+      const squareProps = grid ? grid[idx][i] : {};
+      return <GridSquare { ...squareProps } row={idx} col={i}  key={`square-${idx}-${i}`}/>
     });
-
   }
 
   render() {
-    const { idx } = this.props;
+    const { idx, height } = this.props;
     return (
-      <div className="gridster-grid-row" key={`gridster-row-${idx}`}>
+      <div className="gridster-grid-row" key={`gridster-row-${idx}`} style={{ height: `${height}px` }}>
         {this.renderSquares()}
       </div>
     );

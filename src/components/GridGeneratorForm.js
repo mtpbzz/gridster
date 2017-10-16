@@ -26,17 +26,13 @@ class GridGeneratorForm extends Component {
   handleUpdateRowCount = (event) => {
     event.preventDefault();
     const { updateRowCount } = this.props.gridsterActionCreators;
-    // TODO: ok this is a bit nasty but it enforces the validation on the inputs
-    const value = event.target.value < 1 ? 1 : event.target.value > 10 ? 10 : event.target.value;
-    updateRowCount(value);
+    updateRowCount(event.target.value);
   }
 
   handleUpdateColumnCount = (event) => {
     event.preventDefault();
     const { updateColumnCount } = this.props.gridsterActionCreators;
-    // TODO: ok this is a bit nasty but it enforces the validation on the inputs
-    const value = event.target.value < 1 ? 1 : event.target.value > 10 ? 10 : event.target.value;
-    updateColumnCount(value);
+    updateColumnCount(event.target.value);
   }
 
   render() {
@@ -63,7 +59,7 @@ class GridGeneratorForm extends Component {
                 type="number" />
             </FormGroup>
             <FormGroup>
-              <Button bsStyle="primary" onClick={this.handleGenerate}>Generate</Button>
+              <Button bsStyle="primary" onClick={this.handleGenerateGrid}>Generate</Button>
             </FormGroup>
           </Form>
         </div>

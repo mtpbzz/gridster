@@ -27,7 +27,7 @@ html {
 }
 
 .gridster-wrapper {
-  width: 482px; // width in the mockup provided
+  width: 480px; // width in the mockup provided
   height: 100vh;
   margin: 0 auto;
   padding: 50px 0;
@@ -68,6 +68,45 @@ html {
           border-color: $btn-pressed-color;
         }
       }
+    }
+  }
+  .gridster-grid {
+    margin-top: 28px;
+    border-bottom: 1px solid $grid-border-color;
+  }
+  .gridster-grid-row {
+    height: 48px;
+  }
+  .gridster-grid-square {
+    border: 1px solid $grid-border-color;
+    border-width: 1px 0 0 1px;
+    background-color: $grid-default-color;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    &:last-child {
+      border-right: 1px solid $grid-border-color;
+    }
+    &:hover {
+      background-color: $grid-hover-color;
+    }
+    &:active {
+      background-color: $grid-down-color;
+    }
+    &.active {
+      background-color: $grid-clear-color;
+    }
+    &.start {
+      background-color: $grid-start-color;
+      border-color: $grid-start-color;
+    }
+    &.end {
+      background-color: $grid-end-color;
+      border-color: $grid-end-color;
+    }
+    &.path {
+      background-color: $grid-path-color;
+      border-color: $grid-path-color;
     }
   }
 }

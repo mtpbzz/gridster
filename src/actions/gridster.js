@@ -1,5 +1,4 @@
 export function generateGrid() {
-  const offset = pageOffset !== undefined ? pageOffset : 0;
   return {
     type: 'GENERATE_GRID'
   };
@@ -16,5 +15,13 @@ export function updateColumnCount(cols) {
   return {
     type: 'UPDATE_COLUMN_COUNT',
     colCount: parseInt(cols)
+  };
+}
+
+export function toggleSquare(row, col) {
+  return {
+    type: 'TOGGLE_SQUARE',
+    row,
+    col,
   };
 }

@@ -13,17 +13,17 @@ class Grid extends Component {
   }
 
   renderRows() {
-    const { rowCount, colCount } = this.props.gridster;
-    const rows = [...Array(rowCount).keys()];
-    return rows.map((row, i) => {
-      return <GridRow key={`row-${i}`} idx={i} colCount={colCount} />
+    const { rows } = this.props.gridster;
+    const rowsList = [...Array(rows).keys()];
+    return rowsList.map((row, i) => {
+      return <GridRow key={`row-${i}`} idx={i} />
     });
   }
 
   render() {
-    const { rowCount, colCount } = this.props.gridster;
+    const { rows, cols } = this.props.gridster;
     return (
-      <div className="gridster-grid">
+      <div className="gridster-grid" style={{ height: `${(rows * 48) + 1}px`, width: `${(cols * 48)}px` }} >
        {this.renderRows()}
       </div>
     );
