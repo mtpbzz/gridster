@@ -38,7 +38,7 @@ export function generateGrid(rows, cols) {
       return {
         start: row === start.row && col === start.col,
         end: row === end.row && col === end.col,
-        active: true,
+        active: false,
         visited: false,
       }
     })),
