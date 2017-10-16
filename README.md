@@ -23,7 +23,7 @@ By default the all squares are blocked. Simply click them to create available pa
 ## Notes
 
 * An A* algorithm would actually be a faster approach, although BFS is potential morew thorough.
-* I decided to implement a basic Breadth-first search from scratch rather use a library to help improve my knowledge around this type of algorithm.
+* I decided to implement a basic Breadth-first search from scratch rather than use a library to help improve my knowledge around this type of algorithm.
 * Testing is currently non existent. I'd add these with using mocha / jest.
 
 
