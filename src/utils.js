@@ -69,12 +69,12 @@ function locationStatus(location, grid) {
 
   if (dfl < 0 || dfl >= gridWidth || dft < 0 || dft >= gridHeight) {
     return 'invalid';
+  } else if (grid[dft][dfl].end === true) {
+    return 'end';
   } else if (grid[dft][dfl].active === false) {
     return 'blocked';
   } else if (grid[dft][dfl].visited === true) {
     return 'visited';
-  } else if (grid[dft][dfl].end === true) {
-    return 'end';
   } else {
     return 'valid';
   }
